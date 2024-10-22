@@ -1,8 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
 :root {
-  --gray100: #000000;
-  --gray600: #f8f8f8;
-  --title-size: 6rem;
-  --tile-size-1: 2.5rem;
+  --gray100: #181818;
+  --gray200: #2e2d2d;
+  --gray400: #a6a2a2;
+  --gray500: #f5f5dc;
+  --gray600: #fafafa;
+  --gray700: #ffffff;
+  --title-size-1: 2.5rem;
+  --title-size-2: 2rem;
+  --title-size-3: 1.275rem;
   --text-size-1: 1.75rem;
   --text-size-2: 1.5rem;
+  --text-size-3: 1rem;
+  --main-font:"Ubuntu", sans-serif;
 }
