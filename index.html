@@ -3,28 +3,52 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./src/styles/globalReset.css">
-    <link rel="stylesheet" href="./src/styles/globalStyle.css">
+    <link rel="stylesheet" href="./src/styles/globalReset.css" />
+    <link rel="stylesheet" href="./src/styles/globalStyle.css" />
+    <link rel="stylesheet" href="./src/styles/index.css" />
     <title>SupremeFit</title>
   </head>
   <body>
     <header class="container-header">
-      <h2 class="logo-enterprise">Sumpreme fit</h2>
+      <h2 class="logo-enterprise">SupremeFit</h2>
       <nav class="menu-nav">
         <a class="shopping_cart">Carrinho</a>
-        <button class="menu-drop-box"></button>
+        <button class="btn-menu-drop-box">
+          <img src="./src/assets/menu-svgrepo-com.svg" alt="menu_image" />
+        </button>
       </nav>
     </header>
-    <section class="container-promo">
-      <h1 class="banner-title">OS MELHORES SUPLEMENTOS</h1>
-      <h3 class="banner-subtitle">NOVOS ITENS DISPONÍVEIS AQUI</h3>
-      <a href="" class="shop-now-btn">Comprar</a>
-    </section>
-    <section class="container-list-products">
-      <h2 class="list-title">PRODUTOS COM OS MELHORES PREÇOS</h2>
-      <ul class="list-products">
-        <li class="products-cards"></li>
-      </ul>
-    </section>
+    <main class="container">
+      <section class="container-promo">
+        <img
+          class="banner"
+          src="./src/assets/banner.svg"
+          alt="img_banner_site"
+        />
+        <h1 class="banner-title">
+          Suplementos para Potencializar seu Desempenho
+        </h1>
+        <h3 class="banner-subtitle">VEJA NOSSOS PRODUTOS ABAIXO</h3>
+        <a href="" class="shop-now-btn">Comprar</a>
+      </section>
+      <h3 class="title-list-products">NOSSOS PRODUTOS</h3>
+      <section class="container-list-products">
+        <ul class="list-products">
+          <li class="products-cards">
+            <img src="./src/assets/item_list_image.svg" alt="image_product" />
+            <div class="container-description">
+              <h4 class="name-product">NOME DO SUPLEMENTO</h4>
+              <span class="price-product">R$ 50,00</span>
+            </div>
+          </li>
+        </ul>
+        <a class="btn-products-direct" href="">Ver Tudo</a>
+      </section>
+    </main>
+    <footer class="container-info-owners">
+      <span class="names"> ©2024 Eduardo Henrique & Mateus Gayo. </span>
+      <span class="location"> Tijuca - RJ </span>
+      <span class="number"> Telefone: (11) 1111-1111 </span>
+    </footer>
   </body>
 </html>
