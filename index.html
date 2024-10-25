@@ -10,13 +10,25 @@
   </head>
   <body>
     <header class="container-header">
-      <h2 class="logo-enterprise">SupremeFit</h2>
-      <nav class="menu-nav">
-        <a class="shopping_cart">Carrinho</a>
-        <button class="btn-menu-drop-box">
-          <img src="./src/assets/menu-svgrepo-com.svg" alt="menu_image" />
-        </button>
-      </nav>
+      <div class="container-nav-mobile">
+        <h2 class="logo-enterprise">SupremeFit</h2>
+        <nav class="menu-nav">
+          <button class="btn-menu-drop-box">
+            <img src="./src/assets/menu-svgrepo-com.svg" alt="menu_image" />
+          </button>
+        </nav>
+      </div>
+      <div class="container-nav-desktop">
+        <div class="container-logo">
+          <h2 class="logo-enterprise">SupremeFit</h2>
+          <span class="spam-text"> Os melhores suplementos para você </span>
+        </div>
+        <nav class="menu-nav">
+          <button class="btn-menu-drop-box">
+            <img src="./src/assets/menu-svgrepo-com.svg" alt="menu_image" />
+          </button>
+        </nav>
+      </div>
     </header>
     <main class="container">
       <section class="container-promo">
@@ -29,33 +41,140 @@
           Suplementos para Potencializar seu Desempenho
         </h1>
         <h3 class="banner-subtitle">VEJA NOSSOS PRODUTOS ABAIXO</h3>
-        <a href="" class="shop-now-btn">Comprar</a>
+        <a href="#" class="shop-now-btn">Comprar</a>
       </section>
       <h3 class="title-list-products">NOSSOS PRODUTOS</h3>
       <section class="container-list-products">
         <ul class="list-products">
           <li class="products-cards">
-            <img class="image-product" src="./src/assets/item_list_image.svg" alt="image_product" />
+            <img
+              class="image-product"
+              src="./src/assets/product-img.webp"
+              alt="image_product"
+            />
             <div class="container-description">
               <h4 class="name-product">NOME DO SUPLEMENTO</h4>
               <span class="price-product">R$ 50,00</span>
             </div>
           </li>
           <li class="products-cards">
-            <img class="image-product" src="./src/assets/item_list_image.svg" alt="image_product" />
+            <img
+              class="image-product"
+              src="./src/assets/product-img.webp"
+              alt="image_product"
+            />
+            <div class="container-description">
+              <h4 class="name-product">NOME DO SUPLEMENTO</h4>
+              <span class="price-product">R$ 50,00</span>
+            </div>
+          </li>
+          <li class="products-cards">
+            <img
+              class="image-product"
+              src="./src/assets/product-img.webp"
+              alt="image_product"
+            />
+            <div class="container-description">
+              <h4 class="name-product">NOME DO SUPLEMENTO</h4>
+              <span class="price-product">R$ 50,00</span>
+            </div>
+          </li>
+          <li class="products-cards">
+            <img
+              class="image-product"
+              src="./src/assets/product-img.webp"
+              alt="image_product"
+            />
+            <div class="container-description">
+              <h4 class="name-product">NOME DO SUPLEMENTO</h4>
+              <span class="price-product">R$ 50,00</span>
+            </div>
+          </li>
+          <li class="products-cards">
+            <img
+              class="image-product"
+              src="./src/assets/product-img.webp"
+              alt="image_product"
+            />
+            <div class="container-description">
+              <h4 class="name-product">NOME DO SUPLEMENTO</h4>
+              <span class="price-product">R$ 50,00</span>
+            </div>
+          </li>
+          <li class="products-cards">
+            <img
+              class="image-product"
+              src="./src/assets/product-img.webp"
+              alt="image_product"
+            />
+            <div class="container-description">
+              <h4 class="name-product">NOME DO SUPLEMENTO</h4>
+              <span class="price-product">R$ 50,00</span>
+            </div>
+          </li>
+          <li class="products-cards">
+            <img
+              class="image-product"
+              src="./src/assets/product-img.webp"
+              alt="image_product"
+            />
+            <div class="container-description">
+              <h4 class="name-product">NOME DO SUPLEMENTO</h4>
+              <span class="price-product">R$ 50,00</span>
+            </div>
+          </li>
+          <li class="products-cards">
+            <img
+              class="image-product"
+              src="./src/assets/product-img.webp"
+              alt="image_product"
+            />
             <div class="container-description">
               <h4 class="name-product">NOME DO SUPLEMENTO</h4>
               <span class="price-product">R$ 50,00</span>
             </div>
           </li>
         </ul>
-        <a class="btn-products-direct" href="">Ver Tudo</a>
+        <a class="btn-products-direct" href="./src/pages/shop_page.html" target="_blank">Ver Tudo</a>
       </section>
     </main>
-    <footer class="container-info-owners">
-      <span class="names"> ©2024 Eduardo Henrique & Mateus Gayo. </span>
-      <span class="location"> Tijuca - RJ </span>
-      <span class="number"> Telefone: (11) 1111-1111 </span>
+    <footer class="footer">
+      <div class="footer-container">
+        <nav class="footer-nav">
+          <ul>
+            <li><a href="/src/pages/shop_page.html" target="_blank">Loja</a></li>
+            <li><a href="#sobre-nos">Sobre nós</a></li>
+          </ul>
+        </nav>
+
+        <div class="newsletter">
+          <h3>Participe da nossa Newsletter para receber atualizações!</h3>
+          <input type="email" placeholder="Insira seu e-mail aqui" />
+          <button type="submit">Participar</button>
+        </div>
+
+        <div class="social-media">
+          <a href="#"  title="WhatsApp"
+            ><img src="/imagens/whatsapp.png" alt="WhatsApp"
+          /></a>
+
+          <a href="#"  title="Instagram"
+            ><img src="/imagens/instagram.png" alt="Instagram"
+          /></a>
+
+          <a href="#"  title="Facebook"
+            ><img src="/imagens/facebook-app-symbol (1).png" alt="Facebook"
+          /></a>
+
+          <a href="#"  title="YouTube"
+            ><img src="/imagens/youtube.png" alt="YouTube"
+          /></a>
+
+          <a href="#"  title="Twitter"
+            ><img src="/imagens/twitter.png" alt="Twitter"
+          /></a>
+        </div>
+      </div>
     </footer>
   </body>
 </html>
