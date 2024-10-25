@@ -6,11 +6,12 @@
   --gray500: #f5f5dc;
   --gray600: #fafafa;
   --gray700: #ffffff;
+  --title-size-0: 4.875rem;
   --title-size-1: 2.5rem;
   --title-size-2: 2rem;
   --title-size-3: 1.275rem;
   --text-size-1: 1.75rem;
   --text-size-2: 1.5rem;
   --text-size-3: 1rem;
-  --main-font:"Ubuntu", sans-serif;
+  --main-font: 'Ubuntu', sans-serif;
 }
