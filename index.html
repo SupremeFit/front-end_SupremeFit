@@ -3,26 +3,179 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./src/styles/globalReset.css" />
+    <link rel="stylesheet" href="./src/styles/globalStyle.css" />
+    <link rel="stylesheet" href="./src/styles/index.css" />
     <title>SupremeFit</title>
   </head>
   <body>
     <header class="container-header">
-      <h2 class="logo-enterprise">Sumpreme fit</h2>
-      <nav class="menu-nav">
-        <a class="shopping_cart">Carrinho</a>
-        <button class="menu-drop-box"></button>
-      </nav>
+      <div class="container-nav-mobile">
+        <h2 class="logo-enterprise">SupremeFit</h2>
+        <nav class="menu-nav">
+          <button class="btn-menu-drop-box">
+            <img src="./src/assets/menu-svgrepo-com.svg" alt="menu_image" />
+          </button>
+        </nav>
+      </div>
+      <div class="container-nav-desktop">
+        <div class="container-logo">
+          <h2 class="logo-enterprise">SupremeFit</h2>
+          <span class="spam-text"> Os melhores suplementos para você </span>
+        </div>
+        <nav class="menu-nav">
+          <a href="#" class="shopping_cart">Carrinho</a>
+          <button class="btn-menu-drop-box">
+            <img src="./src/assets/menu-svgrepo-com.svg" alt="menu_image" />
+          </button>
+        </nav>
+      </div>
     </header>
-    <section class="container-promo">
-      <h1 class="banner-title">OS MELHORES SUPLEMENTOS</h1>
-      <h3 class="banner-subtitle">NOVOS ITENS DISPONÍVEIS AQUI</h3>
-      <a href="" class="shop-now-btn">Comprar</a>
-    </section>
-    <section class="container-list-products">
-      <h2 class="list-title">PRODUTOS COM OS MELHORES PREÇOS</h2>
-      <ul class="list-products">
-        <li class="products-cards"></li>
-      </ul>
-    </section>
+    <main class="container">
+      <section class="container-promo">
+        <img
+          class="banner"
+          src="./src/assets/banner.svg"
+          alt="img_banner_site"
+        />
+        <h1 class="banner-title">
+          Suplementos para Potencializar seu Desempenho
+        </h1>
+        <h3 class="banner-subtitle">VEJA NOSSOS PRODUTOS ABAIXO</h3>
+        <a href="#" class="shop-now-btn">Comprar</a>
+      </section>
+      <h3 class="title-list-products">NOSSOS PRODUTOS</h3>
+      <section class="container-list-products">
+        <ul class="list-products">
+          <li class="products-cards">
+            <img
+              class="image-product"
+              src="./src/assets/product-img.webp"
+              alt="image_product"
+            />
+            <div class="container-description">
+              <h4 class="name-product">NOME DO SUPLEMENTO</h4>
+              <span class="price-product">R$ 50,00</span>
+            </div>
+          </li>
+          <li class="products-cards">
+            <img
+              class="image-product"
+              src="./src/assets/product-img.webp"
+              alt="image_product"
+            />
+            <div class="container-description">
+              <h4 class="name-product">NOME DO SUPLEMENTO</h4>
+              <span class="price-product">R$ 50,00</span>
+            </div>
+          </li>
+          <li class="products-cards">
+            <img
+              class="image-product"
+              src="./src/assets/product-img.webp"
+              alt="image_product"
+            />
+            <div class="container-description">
+              <h4 class="name-product">NOME DO SUPLEMENTO</h4>
+              <span class="price-product">R$ 50,00</span>
+            </div>
+          </li>
+          <li class="products-cards">
+            <img
+              class="image-product"
+              src="./src/assets/product-img.webp"
+              alt="image_product"
+            />
+            <div class="container-description">
+              <h4 class="name-product">NOME DO SUPLEMENTO</h4>
+              <span class="price-product">R$ 50,00</span>
+            </div>
+          </li>
+          <li class="products-cards">
+            <img
+              class="image-product"
+              src="./src/assets/product-img.webp"
+              alt="image_product"
+            />
+            <div class="container-description">
+              <h4 class="name-product">NOME DO SUPLEMENTO</h4>
+              <span class="price-product">R$ 50,00</span>
+            </div>
+          </li>
+          <li class="products-cards">
+            <img
+              class="image-product"
+              src="./src/assets/product-img.webp"
+              alt="image_product"
+            />
+            <div class="container-description">
+              <h4 class="name-product">NOME DO SUPLEMENTO</h4>
+              <span class="price-product">R$ 50,00</span>
+            </div>
+          </li>
+          <li class="products-cards">
+            <img
+              class="image-product"
+              src="./src/assets/product-img.webp"
+              alt="image_product"
+            />
+            <div class="container-description">
+              <h4 class="name-product">NOME DO SUPLEMENTO</h4>
+              <span class="price-product">R$ 50,00</span>
+            </div>
+          </li>
+          <li class="products-cards">
+            <img
+              class="image-product"
+              src="./src/assets/product-img.webp"
+              alt="image_product"
+            />
+            <div class="container-description">
+              <h4 class="name-product">NOME DO SUPLEMENTO</h4>
+              <span class="price-product">R$ 50,00</span>
+            </div>
+          </li>
+        </ul>
+        <a class="btn-products-direct" href="./src/pages/shop_page.html" target="_blank">Ver Tudo</a>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="footer-container">
+        <nav class="footer-nav">
+          <ul>
+            <li><a href="/src/pages/shop_page.html" target="_blank">Loja</a></li>
+            <li><a href="#sobre-nos">Sobre nós</a></li>
+          </ul>
+        </nav>
+
+        <div class="newsletter">
+          <h3>Participe da nossa Newsletter para receber atualizações!</h3>
+          <input type="email" placeholder="Insira seu e-mail aqui" />
+          <button type="submit">Participar</button>
+        </div>
+
+        <div class="social-media">
+          <a href="#"  title="WhatsApp"
+            ><img src="/imagens/whatsapp.png" alt="WhatsApp"
+          /></a>
+
+          <a href="#"  title="Instagram"
+            ><img src="/imagens/instagram.png" alt="Instagram"
+          /></a>
+
+          <a href="#"  title="Facebook"
+            ><img src="/imagens/facebook-app-symbol (1).png" alt="Facebook"
+          /></a>
+
+          <a href="#"  title="YouTube"
+            ><img src="/imagens/youtube.png" alt="YouTube"
+          /></a>
+
+          <a href="#"  title="Twitter"
+            ><img src="/imagens/twitter.png" alt="Twitter"
+          /></a>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
