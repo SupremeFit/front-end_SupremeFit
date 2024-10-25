@@ -8,7 +8,7 @@ body {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  padding:1rem;
+  padding: 1rem;
   background-color: var(--gray100);
   color: var(--gray500);
   position: sticky;
@@ -18,11 +18,17 @@ body {
 .container-nav-desktop {
   display: none;
 }
+.container-nav-mobile {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
 .logo-enterprise {
-  font-size: calc(var(--title-size-2) + 1.6875rem);
+  font-size: var(--title-size-2);
   font-weight: bold;
 }
-.spam-text{
+.spam-text {
   font-size: calc(var(--text-size-3) + 0.255rem);
   font-weight: 100;
 }
@@ -31,9 +37,12 @@ body {
   flex-direction: row;
   align-items: center;
   gap: 2rem;
+
 }
 
 .shopping_cart {
+  color: var(--gray500);
+  text-decoration: none;
   font-size: var(--text-size-3);
 }
 
@@ -43,8 +52,8 @@ body {
   background: none;
   border: none;
   img {
-    width: 100%;
-    height: 100%;
+    width: 2rem;
+    height: 2rem;
     object-fit: contain;
   }
 }
@@ -106,7 +115,7 @@ body {
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 0.25rem;
+
   overflow-x: auto;
   width: 100%;
   height: 21.25rem;
@@ -117,6 +126,7 @@ body {
   display: none;
 }
 .products-cards {
+  padding: 0 0.5rem 0 0.5rem;
   background-color: var(--gray700);
   height: 22rem;
 }
@@ -131,7 +141,6 @@ body {
 }
 .name-product {
   margin-top: 0.5rem;
-
 }
 .btn-products-direct {
   text-decoration: none;
@@ -163,7 +172,6 @@ body {
 .footer-container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 20px;
 }
 
 .footer-nav ul {
@@ -186,39 +194,33 @@ body {
   color: #7c7369;
 }
 
-
-.newsletter input[type="email"] {
+.newsletter input[type='email'] {
   background-color: transparent;
   border: none;
   border-bottom: 1px solid beige;
   color: beige;
   padding: 5px;
-  width:300px;
+  width: 300px;
   outline: none;
   font-family: var(--main-font);
   font-size: 15px;
 }
 
-.newsletter input[type="email"]::placeholder {
+.newsletter input[type='email']::placeholder {
   color: beige;
   opacity: 0.7;
 }
 
 .newsletter button {
   font-family: var(--main-font);
-  font-size:15px;
+  font-size: 15px;
   padding: 5px 15px;
   background-color: beige;
   color: black;
-  border: none;
+  border: 1px transparent solid;
   cursor: pointer;
   transition: 0.3s ease;
   margin-top: 10px;
-}
-
-.newsletter button:hover {
-  background-color: #7c7369;
-  color: white;
 }
 
 .social-media {
@@ -240,17 +242,29 @@ body {
 }
 @media (min-width: 48rem) {
   /* 768px para rem */
+  .btn-menu-drop-box {
+    cursor: pointer;
+  }
+  .btn-products-direct {
+    cursor: pointer;
+  }
   .container-nav-mobile {
     display: none;
   }
-
+  .logo-enterprise {
+    font-size: calc(var(--title-size-2) + 1.6875rem);
+  }
   .container-nav-desktop {
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    position: relative;
   }
-
+.menu-nav{
+  position: absolute;
+  right: 0;
+}
   .container-logo {
     width: 100%;
     text-align: center;
@@ -266,19 +280,20 @@ body {
     height: clamp(20rem, 50vw, 41.25rem);
   }
   .list-products {
+    gap: 25px;
     max-width: 108.9375rem;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(26.875rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(25.875rem, 1fr));
     justify-items: center;
     overflow: visible;
     height: 100%;
     position: relative;
   }
-  .container-description{
-    display: flex ;
+  .container-description {
+    display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content:space-between ;
+    justify-content: space-between;
     padding: 1rem 0;
   }
   .banner-title {
@@ -289,8 +304,13 @@ body {
     font-size: var(--title-size-0);
   }
   .products-cards {
-    width: 26.25rem;
-    height: 33.5625rem;
+    height: 487px;
+    margin: 0 5px 0 5px;
+    padding: 0;
+    width: 25rem;
+    -webkit-box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.15);
+    -moz-box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.15);
+    box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.15);
   }
   .image-product {
     width: 100%;
@@ -301,6 +321,12 @@ body {
     -moz-box-shadow: 0px 3px 15px 0px rgba(0, 0, 0, 0.75);
     box-shadow: 0px 3px 15px 0px rgba(0, 0, 0, 0.75);
     transition: transform 0.3s ease;
-
+  }
+  .newsletter > button:hover {
+    background-color: #181818;
+    color: white;
+    transform: translate(0); /* Mantém o botão fixo */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: 1px solid white;
   }
 }
