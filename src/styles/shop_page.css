@@ -2,7 +2,6 @@ body {
   display: flex;
   text-decoration: none;
   line-height: 1;
-  height: 100vh;
   flex-direction: column;
   gap: 32px 0px;
   justify-content: space-between;
@@ -14,6 +13,7 @@ body {
   top: 0;
   left: 0;
   width: 100%;
+
   z-index: 1000;
   background-color: #181818;
   color: beige;
@@ -68,25 +68,26 @@ h2 {
 
 .product-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(410px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(385px, 1fr));
+  gap: 1rem 0;
   justify-items: center;
   justify-content: space-between;
-  gap: 1rem 0;
-  gap: 2rem 1.5rem;
   scroll-behavior: smooth;
 }
 
 .product {
-  width: 400px;
+  height: 370px;
+  width: 300px;
   background-color: white;
-  text-align: center;
   margin-top: 0;
-
+  text-align: start;
+  -webkit-box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.15);
 }
 
 .product img {
   max-width: 100%;
-
   transition: 0.3s;
 }
 
@@ -100,15 +101,13 @@ h2 {
 
 .product h3 {
   font-size: 15px;
-  margin: 10px 05px 0;
-  margin-top: 18px;
+  margin: 10px 0px 10px 3px;
 }
 
 .product p {
   font-size: 17px;
   color: #555;
-  margin-top: 0;
-  margin-bottom: 15px;
+  margin:10px 0px 10px 3px;
 }
 
 .footer {
@@ -209,12 +208,13 @@ h2 {
     overflow-x: auto;
     height: 35.25rem;
     scroll-behavior: smooth;
-    padding: 0 15px 0 15px;
+    padding: 0px 10px 0 10px;
   }
   .header {
     display: flex;
     align-items: center;
     height: 109px;
+    padding: 0;
     justify-content: space-between;
     align-items: center;
   }

@@ -104,11 +104,11 @@ body {
   font-weight: bolder;
 }
 .container-list-products {
-  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  padding: 0 10px 0 10px;
   gap: 1.25rem;
 }
 .list-products {
@@ -280,10 +280,10 @@ body {
     height: clamp(20rem, 50vw, 41.25rem);
   }
   .list-products {
-    gap: 25px;
+    gap: 40px;
     max-width: 108.9375rem;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(25.875rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(18.875rem, 1fr));
     justify-items: center;
     overflow: visible;
     height: 100%;
@@ -294,7 +294,6 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    padding: 1rem 0;
   }
   .banner-title {
     font-weight: bolder;
@@ -304,17 +303,18 @@ body {
     font-size: var(--title-size-0);
   }
   .products-cards {
-    height: 487px;
-    margin: 0 5px 0 5px;
+    height: 370px;
+    width: 300px;
     padding: 0;
-    width: 25rem;
+    margin: 0;
     -webkit-box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.15);
     -moz-box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.15);
     box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.15);
   }
-  .image-product {
+  .image-product{
     width: 100%;
   }
+
   .products-cards:hover {
     transform: scale(1.1);
     -webkit-box-shadow: 0px 3px 15px 0px rgba(0, 0, 0, 0.75);
