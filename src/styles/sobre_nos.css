@@ -1,0 +1,210 @@
+html, body {
+    height: 100%;
+    font-family: 'Avenir Light', sans-serif; 
+    background-color: #ffffff;
+    margin: 0;
+    padding: 0;
+    padding-top: 75px; /* Reduza este valor para diminuir o espaço */
+}
+
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: #181818;
+    color: beige;
+    padding: 15px 0;
+    text-align: center;
+}
+
+.menu-icon {
+    position: absolute;
+    top: 50px;
+    right: 50px;
+    cursor: pointer;
+}
+
+.menu-icon img {
+    width: 45px;
+    height: 45px;
+}
+
+h1 {
+    margin: 0;
+    font-size: 59px;
+    font-family: 'Anton', sans-serif;
+    font-weight: 400;
+}
+
+h2 {
+    margin: 0px 0;
+    font-size: 20px;
+    font-family: 'Avenir Light', sans-serif; 
+    font-weight: 300;
+}
+
+.about-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #181818;
+    padding: 50px;
+    color: white;
+    max-width: 1200px; /* Define a largura fixa do contêiner principal */
+    margin: 50px auto; /* Centraliza o contêiner na página */
+    margin-left: center;
+    margin-right: center;
+}
+
+.about-text {
+    flex: 1;
+    padding-right: 30px; 
+    max-width: 600px; 
+    text-align: justify; /* Justifica o texto */
+}
+
+.about-text h2 {
+    font-family: 'Anton', sans-serif;
+    font-size: 30px;
+    font-weight: 200; 
+    text-transform: uppercase;
+    margin-bottom: 40px; /* Remove a margem superior e define a inferior */
+    letter-spacing: 7px;
+    text-align: center; /* Mantém o título alinhado à esquerda */
+    width: 100%; /* Garante que o título ocupa toda a largura disponível */
+}
+
+.about-text p {
+    margin: 0;
+    font-family: 'Avenir Light', sans-serif; 
+    font-weight: 300; 
+    font-size: 17px;
+    line-height: 1.6;
+    margin-bottom: 5px; /* Espaçamento entre os parágrafos */
+    text-align: justify;
+    text-indent: 20px; /* Altere o valor para ajustar o recuo da primeira linha */
+}
+
+.about-image {
+    flex: 1;
+    position: relative; 
+    overflow: hidden; 
+}
+
+.about-image img {
+    width: 100%; 
+    height: auto; /* Mantém a proporção da imagem */
+    max-height: 100%; /* Garante que não exceda a altura do contêiner */
+    object-fit: cover; /* Cobre o espaço disponível */
+    position: relative; 
+}
+
+
+.footer {
+    background-color: #181818;
+    color: beige;
+    padding: 20px 0;
+    text-align: center;
+    position: relative;
+    font-family: 'Avenir Light', sans-serif;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-nav li {
+    display: inline;
+    margin: 0 15px;
+}
+
+.footer-nav a {
+    color: beige;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-nav a:hover {
+    color: #7c7369;
+}
+
+.newsletter input[type="email"] {
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid beige;
+    color: beige;
+    padding: 5px;
+    width: 300px;
+    outline: none;
+    font-family: 'Avenir Light', sans-serif;
+    font-size: 15px;
+}
+
+.newsletter input[type="email"]::placeholder {
+    color: beige;
+    opacity: 0.7;
+}
+
+.newsletter button {
+    font-family: 'Avenir Light', sans-serif;
+    font-size: 15px;
+    padding: 10px 20px;
+    background-color: beige;
+    color: black;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s ease;
+    margin-top: 10px;
+}
+
+.newsletter button:hover {
+    background-color: #7c7369;
+    color: white;
+    transform: translate(2px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.social-media {
+    margin-top: 20px;
+}
+
+.social-media a {
+    margin: 0 10px;
+}
+
+.social-media img {
+    width: 20px;
+    height: 20px;
+    transition: transform 0.3s ease;
+}
+
+.social-media img:hover {
+    transform: scale(1.5);
+}
+
+@media (max-width: 768px) {
+    .about-container {
+        flex-direction: column;
+        padding-right: 0px;
+    }
+    
+    .about-image {
+        margin-top: 20px;
+        width: 100%;
+    }
+}
