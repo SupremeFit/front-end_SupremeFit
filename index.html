@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./src/styles/globalReset.css" />
     <link rel="stylesheet" href="./src/styles/globalStyle.css" />
+    <link rel="stylesheet" href="./src/styles/modal.css" />
     <link rel="stylesheet" href="./src/styles/index.css" />
+    <script defer type="module" src="./src/scripts/index.js"></script>
     <title>SupremeFit</title>
   </head>
   <body>
@@ -13,9 +15,7 @@
       <div class="container-nav-mobile">
         <h2 class="logo-enterprise">SupremeFit</h2>
         <nav class="menu-nav">
-          <button class="btn-menu-drop-box">
-            <img src="./src/assets/menu-svgrepo-com.svg" alt="menu_image" />
-          </button>
+          <div class="shopping_cart">Carrinho <span class="cart-counter">0</span></div>
         </nav>
       </div>
       <div class="container-nav-desktop">
@@ -24,10 +24,7 @@
           <span class="spam-text"> Os melhores suplementos para você </span>
         </div>
         <nav class="menu-nav">
-          <a href="#" class="shopping_cart">Carrinho</a>
-          <button class="btn-menu-drop-box">
-            <img src="./src/assets/menu-svgrepo-com.svg" alt="menu_image" />
-          </button>
+          <div class="shopping_cart">Carrinho <span class="cart-counter">0</span></div>
         </nav>
       </div>
     </header>
@@ -47,94 +44,7 @@
       <h3 class="title-list-products">NOSSOS PRODUTOS</h3>
       <section class="container-list-products">
         <ul class="list-products">
-          <li class="products-cards">
-            <img
-              class="image-product"
-              src="./src/assets/product-img.webp"
-              alt="image_product"
-            />
-            <div class="container-description">
-              <h4 class="name-product">NOME DO SUPLEMENTO</h4>
-              <span class="price-product">R$ 50,00</span>
-            </div>
-          </li>
-          <li class="products-cards">
-            <img
-              class="image-product"
-              src="./src/assets/product-img.webp"
-              alt="image_product"
-            />
-            <div class="container-description">
-              <h4 class="name-product">NOME DO SUPLEMENTO</h4>
-              <span class="price-product">R$ 50,00</span>
-            </div>
-          </li>
-          <li class="products-cards">
-            <img
-              class="image-product"
-              src="./src/assets/product-img.webp"
-              alt="image_product"
-            />
-            <div class="container-description">
-              <h4 class="name-product">NOME DO SUPLEMENTO</h4>
-              <span class="price-product">R$ 50,00</span>
-            </div>
-          </li>
-          <li class="products-cards">
-            <img
-              class="image-product"
-              src="./src/assets/product-img.webp"
-              alt="image_product"
-            />
-            <div class="container-description">
-              <h4 class="name-product">NOME DO SUPLEMENTO</h4>
-              <span class="price-product">R$ 50,00</span>
-            </div>
-          </li>
-          <li class="products-cards">
-            <img
-              class="image-product"
-              src="./src/assets/product-img.webp"
-              alt="image_product"
-            />
-            <div class="container-description">
-              <h4 class="name-product">NOME DO SUPLEMENTO</h4>
-              <span class="price-product">R$ 50,00</span>
-            </div>
-          </li>
-          <li class="products-cards">
-            <img
-              class="image-product"
-              src="./src/assets/product-img.webp"
-              alt="image_product"
-            />
-            <div class="container-description">
-              <h4 class="name-product">NOME DO SUPLEMENTO</h4>
-              <span class="price-product">R$ 50,00</span>
-            </div>
-          </li>
-          <li class="products-cards">
-            <img
-              class="image-product"
-              src="./src/assets/product-img.webp"
-              alt="image_product"
-            />
-            <div class="container-description">
-              <h4 class="name-product">NOME DO SUPLEMENTO</h4>
-              <span class="price-product">R$ 50,00</span>
-            </div>
-          </li>
-          <li class="products-cards">
-            <img
-              class="image-product"
-              src="./src/assets/product-img.webp"
-              alt="image_product"
-            />
-            <div class="container-description">
-              <h4 class="name-product">NOME DO SUPLEMENTO</h4>
-              <span class="price-product">R$ 50,00</span>
-            </div>
-          </li>
+          
         </ul>
         <a class="btn-products-direct" href="./src/pages/shop_page.html" target="_blank">Ver Tudo</a>
       </section>
@@ -144,7 +54,7 @@
         <nav class="footer-nav">
           <ul>
             <li><a href="/src/pages/shop_page.html" target="_blank">Loja</a></li>
-            <li><a href="#sobre-nos">Sobre nós</a></li>
+            <li><a href="/src/pages/sobre_nos.html">Sobre nós</a></li>
           </ul>
         </nav>
 
@@ -177,5 +87,14 @@
         </div>
       </div>
     </footer>
+    <div class="container-product-modal" class="modal">
+
+    </div>
+    <div class="cart-modal">
+      <div class="cart">
+        <div class="cart-items">Nenhum item</div>
+        <div class="cart-total">0</div>
+      </div>
+    </div>
   </body>
 </html>
