@@ -9,10 +9,16 @@ function showModal(product) {
       <div class="modal-content">
         <span class="close">&times;</span>
         <img class="modal-image" src="${product.imageUrl}" alt="${product.name}" />
-        <div class="container-description">
-          <span class="description-product">${product.description}</span>
+        <div class="container-modal">
+          <div class="container-info-product">
+            <span class="name-product-modal">${product.name}</span>
+            <span class="price-product-modal">R$ ${product.price}</span>
+          </div>
+          <div class="container-description">
+            <span class="description-product">${product.description}</span>
+          </div>
+          <button class="buy-button-modal">Comprar</button>
         </div>
-        <button class="buy-button-modal">Comprar</button>
       </div>
     `;
   modal.style.display = "flex";
@@ -35,10 +41,10 @@ function showModal(product) {
   });
 
   const buyButton = modal.querySelector(".buy-button-modal");
-  buyButton.addEventListener("click", () => {
+  buyButton.addEventListener("click", (e) => {
     addToCart(product);
     updateCartDisplay();
-    updateCartCounter(); // Atualiza o contador ao adicionar o produto
+    updateCartCounter(); 
     modal.style.display = "none"; 
   });
 }
@@ -72,7 +78,7 @@ function removeFromCart(productId) {
     }
   }
   updateCartDisplay();
-  updateCartCounter(); // Atualiza o contador ao remover o produto
+  updateCartCounter(); 
 }
 
 function updateCartDisplay() {
@@ -85,10 +91,19 @@ function updateCartDisplay() {
   cart.forEach(item => {
     total += item.totalPrice;
     
-    const cartItemElement = document.createElement("div");
+    const cartItemElement = document.createElement("li");
     cartItemElement.classList.add("cart-item");
     cartItemElement.innerHTML = `
-      <span>${item.name} (x${item.quantity}) - R$ ${item.totalPrice.toFixed(2)}</span>
+       <img
+        class="image-product-cart"
+        src="${item.imageUrl}"
+        alt="${item.altText}"
+      />
+      <div class="info-product-cart">
+        <span class="name-item-cart">${item.name}</span>
+        <span class="price-item-cart">- R$ ${item.totalPrice.toFixed(2)}</span>
+      </div>
+      <span class="quantity">(x${item.quantity})</span>
       <button class="remove-item-button" data-id="${item.id}">Remover</button>
     `;
 
@@ -108,7 +123,7 @@ function updateCartDisplay() {
 
 function updateCartCounter() {
   const cartCounter = document.querySelector(".cart-counter");
-  if (cartCounter) {  // Verifica se o elemento existe
+  if (cartCounter) {
     const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
     cartCounter.textContent = totalItems;
   } else {
@@ -119,58 +134,55 @@ function updateCartCounter() {
 function showCartModal() {
   const cartModal = document.querySelector(".cart-modal");
 
-  // Define o conteúdo do modal, incluindo o botão de fechar (X) e o botão "Fechar"
   cartModal.innerHTML = `
     <div class="cart-modal-content">
-      <span class="close">&times;</span>
+      <span class="close"></span>
       <h2 class="title-cart">Carrinho de Compras</h2>
-      <div class="cart-items"></div>
-      <div class="cart-total"></div>
-      <button class="close-cart-button">Fechar</button>
+      <ul class="cart-items"></ul>
+      <div class="info-cart">
+        <div class="cart-total"></div>
+        <button class="close-cart-button">&times</button>
+      </div>
     </div>
   `;
 
-  // Exibe o modal
   cartModal.style.display = "flex";
 
-  // Evento para fechar com o botão "X"
   const closeButton = cartModal.querySelector(".close");
   closeButton.addEventListener("click", () => {
     cartModal.style.display = "none";
   });
 
-  // Evento para fechar com o botão "Fechar" no final do modal
   const closeCartButton = cartModal.querySelector(".close-cart-button");
   closeCartButton.addEventListener("click", () => {
     cartModal.style.display = "none";
   });
 
-  // Evento para fechar clicando no fundo
   cartModal.addEventListener("click", (event) => {
     if (event.target === cartModal) {
       cartModal.style.display = "none";
     }
   });
 
-  // Evento para fechar com a tecla "Esc"
   document.addEventListener("keydown", function handleEsc(event) {
     if (event.key === "Escape") {
       cartModal.style.display = "none";
-      // Remove o evento para evitar múltiplos listeners
       document.removeEventListener("keydown", handleEsc);
     }
   });
 
-  // Atualiza a exibição dos itens no carrinho
   updateCartDisplay();
 }
 
-// Adiciona um evento de clique ao botão do carrinho para abrir o modal
 const cartButton = document.querySelector(".shopping_cart");
-cartButton.addEventListener("click", (e) => {
-  e.preventDefault(); // Evita o comportamento padrão do link
-  showCartModal();
-});
+if (cartButton) {
+  cartButton.addEventListener("click", (e) => {
+    e.preventDefault();
+    showCartModal();
+  });
+} else {
+  console.warn("Botão de carrinho não encontrado.");
+}
 
 const cardsProducts = () => {
   const ulElement = document.querySelector('.list-products');
