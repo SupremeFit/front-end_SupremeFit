@@ -129,7 +129,7 @@ function showCartModal() {
 
   cartModal.innerHTML = `
     <div class="cart-modal-content">
-      <span class="close">&times;</span>
+      <span class="close"></span>
       <h2 class="title-cart">Carrinho de Compras</h2>
       <ul class="cart-items"></ul>
       <div class="info-cart">
