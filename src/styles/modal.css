@@ -21,7 +21,9 @@
   align-items: center;
   justify-content: space-evenly;
 }
-
+.shopping_cart{
+  cursor: pointer;
+}
 .close {
   color: #aaa;
   float: right;
